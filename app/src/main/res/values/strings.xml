@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">TunnelGate</string>
+    <string name="xposed_desc">LSPosed 隧道策略切换器</string>
+
+    <string name="status_ready">准备就绪</string>
+    <string name="status_loaded_current_config">已加载当前配置</string>
+    <string name="status_saved">已保存配置，并请求重新评估</string>
+    <string name="status_restored_defaults">已恢复默认配置</string>
+    <string name="status_capture_cancelled">已取消捕获：%1$s</string>
+    <string name="status_capture_failed_bundle">捕获失败：未返回 Tasker Bundle</string>
+    <string name="status_captured_action">已捕获 Tasker 动作：%1$s</string>
+    <string name="status_open_tasker_hint">请在 V2RayTun 的 Tasker 页面中配置并保存：%1$s</string>
+    <string name="status_open_tasker_failed">无法打开 V2RayTun Tasker 页面：%1$s</string>
+    <string name="status_manual_sent">已发送手动命令：%1$s</string>
+    <string name="status_tasker_cleared">已清空 Tasker 动作缓存</string>
+    <string name="status_logs_cleared">已清空日志</string>
+
+    <string name="section_diagnostics">诊断</string>
+    <string name="diag_checking_su">SU 状态：检查中…</string>
+    <string name="diag_checking_lsposed">LSPosed 状态：检查中…</string>
+    <string name="diag_su_ok">SU 状态：已授权</string>
+    <string name="diag_su_failed">SU 状态：未授权或不可用（code=%1$d，%2$s）</string>
+    <string name="diag_lsposed_ok_monitoring">LSPosed 状态：系统 Hook 在线，策略监听中
+最近上报：%1$s
+消息：%2$s</string>
+    <string name="diag_lsposed_ok_idle">LSPosed 状态：系统 Hook 在线，但尚未开始监听
+最近上报：%1$s
+消息：%2$s</string>
+    <string name="diag_lsposed_missing">LSPosed 状态：未检测到系统 Hook 回应。请检查模块是否启用，并且作用域只勾选 System Framework (android)。</string>
+
+    <string name="button_refresh_status">刷新状态</string>
+    <string name="button_clear_logs">清空日志</string>
+    <string name="label_automation_enabled">启用自动化策略</string>
+
+    <string name="section_control_backend">控制后端</string>
+    <string name="mode_shell">通用 Shell 命令（适合任意代理软件）</string>
+    <string name="mode_tasker">V2RayTun Tasker 插件（推荐，静默）</string>
+
+    <string name="section_tasker_capture">Tasker 插件动作捕获</string>
+    <string name="tasker_help">点下面按钮后，会打开 V2RayTun 的 Tasker 配置界面。请分别配置 Start 和 Stop 并保存。之后自动切换时将直接广播到 TaskerReceiver，不再使用 deeplink Activity。</string>
+    <string name="button_capture_start">捕获 Start</string>
+    <string name="button_capture_stop">捕获 Stop</string>
+    <string name="button_clear_tasker">清空 Tasker</string>
+    <string name="tasker_start_unset">Start：未配置</string>
+    <string name="tasker_stop_unset">Stop：未配置</string>
+    <string name="label_start_action">Start</string>
+    <string name="label_stop_action">Stop</string>
+    <string name="label_no_blurb">（无 blurb）</string>
+    <string name="template_tasker_configured">%1$s：已配置
+%2$s</string>
+    <string name="template_tasker_not_configured">%1$s：未配置</string>
+
+    <string name="section_shell_help">Shell 后端说明</string>
+    <string name="shell_help">此模式适合任意代理软件。第一次请先点一次手动执行，让 KSU / Magisk 记住 su 授权。</string>
+    <string name="label_start_command">Start 命令（root shell）</string>
+    <string name="label_stop_command">Stop 命令（root shell）</string>
+    <string name="hint_start_command">am start -W -a android.intent.action.VIEW -d v2raytun://control/start -p com.v2raytun.android</string>
+    <string name="hint_stop_command">am start -W -a android.intent.action.VIEW -d v2raytun://control/stop -p com.v2raytun.android</string>
+
+    <string name="label_cellular">蜂窝网络</string>
+    <string name="label_wifi_blacklist">黑名单 Wi‑Fi</string>
+    <string name="label_wifi_other">非黑名单 Wi‑Fi</string>
+    <string name="label_no_network">无网络 / 未验证网络</string>
+    <string name="action_enable_proxy">开启代理</string>
+    <string name="action_disable_proxy">关闭代理</string>
+    <string name="label_require_validated">仅在 VALIDATED 网络下按 Wi‑Fi / 蜂窝规则处理</string>
+    <string name="label_blacklist">黑名单 SSID（每行一个，也支持逗号 / 分号分隔）</string>
+    <string name="hint_blacklist">HomeWiFi
+OfficeWiFi</string>
+    <string name="label_debounce">防抖毫秒</string>
+    <string name="label_boot_delay">开机后延迟启动策略（毫秒）</string>
+
+    <string name="button_save">保存</string>
+    <string name="button_restore_defaults">恢复默认</string>
+    <string name="button_manual_start">手动 Start</string>
+    <string name="button_manual_stop">手动 Stop</string>
+
+    <string name="section_logs">日志</string>
+    <string name="logs_empty">暂无日志</string>
+    <string name="prompt_check_su">请检查 Root / SU 是否已授权。</string>
+    <string name="prompt_check_lsposed">请检查 LSPosed 模块是否启用，以及作用域是否只勾选 System Framework (android)。</string>
+    <string name="developer_signature">开发者：https://github.com/hyyz17200</string>
+</resources>

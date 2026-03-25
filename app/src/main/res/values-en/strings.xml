@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">TunnelGate</string>
+    <string name="xposed_desc">LSPosed tunnel policy switcher</string>
+
+    <string name="status_ready">Ready</string>
+    <string name="status_loaded_current_config">Current configuration loaded</string>
+    <string name="status_saved">Configuration saved and reevaluation requested</string>
+    <string name="status_restored_defaults">Default configuration restored</string>
+    <string name="status_capture_cancelled">Capture cancelled: %1$s</string>
+    <string name="status_capture_failed_bundle">Capture failed: Tasker bundle was not returned</string>
+    <string name="status_captured_action">Tasker action captured: %1$s</string>
+    <string name="status_open_tasker_hint">Configure and save this action in V2RayTun Tasker page: %1$s</string>
+    <string name="status_open_tasker_failed">Unable to open V2RayTun Tasker page: %1$s</string>
+    <string name="status_manual_sent">Manual command sent: %1$s</string>
+    <string name="status_tasker_cleared">Tasker action cache cleared</string>
+    <string name="status_logs_cleared">Logs cleared</string>
+
+    <string name="section_diagnostics">Diagnostics</string>
+    <string name="diag_checking_su">SU status: checking…</string>
+    <string name="diag_checking_lsposed">LSPosed status: checking…</string>
+    <string name="diag_su_ok">SU status: granted</string>
+    <string name="diag_su_failed">SU status: not granted or unavailable (code=%1$d, %2$s)</string>
+    <string name="diag_lsposed_ok_monitoring">LSPosed status: system hook online, monitoring active
+Last report: %1$s
+Message: %2$s</string>
+    <string name="diag_lsposed_ok_idle">LSPosed status: system hook online, monitoring not started yet
+Last report: %1$s
+Message: %2$s</string>
+    <string name="diag_lsposed_missing">LSPosed status: no system hook response detected. Check whether the module is enabled and scoped only to System Framework (android).</string>
+
+    <string name="button_refresh_status">Refresh status</string>
+    <string name="button_clear_logs">Clear logs</string>
+    <string name="label_automation_enabled">Enable automation policy</string>
+
+    <string name="section_control_backend">Control backend</string>
+    <string name="mode_shell">Generic shell commands (works with any proxy app)</string>
+    <string name="mode_tasker">V2RayTun Tasker plugin (recommended, silent)</string>
+
+    <string name="section_tasker_capture">Tasker plugin action capture</string>
+    <string name="tasker_help">After tapping a button below, V2RayTun will open its Tasker configuration page. Configure and save Start and Stop. Future automatic switching will broadcast directly to TaskerReceiver instead of using the deeplink activity.</string>
+    <string name="button_capture_start">Capture Start</string>
+    <string name="button_capture_stop">Capture Stop</string>
+    <string name="button_clear_tasker">Clear Tasker</string>
+    <string name="tasker_start_unset">Start: not configured</string>
+    <string name="tasker_stop_unset">Stop: not configured</string>
+    <string name="label_start_action">Start</string>
+    <string name="label_stop_action">Stop</string>
+    <string name="label_no_blurb">(no blurb)</string>
+    <string name="template_tasker_configured">%1$s: configured
+%2$s</string>
+    <string name="template_tasker_not_configured">%1$s: not configured</string>
+
+    <string name="section_shell_help">Shell backend notes</string>
+    <string name="shell_help">This mode works with any proxy app. Run a manual action once so KSU / Magisk can remember the SU grant.</string>
+    <string name="label_start_command">Start command (root shell)</string>
+    <string name="label_stop_command">Stop command (root shell)</string>
+    <string name="hint_start_command">am start -W -a android.intent.action.VIEW -d v2raytun://control/start -p com.v2raytun.android</string>
+    <string name="hint_stop_command">am start -W -a android.intent.action.VIEW -d v2raytun://control/stop -p com.v2raytun.android</string>
+
+    <string name="label_cellular">Cellular network</string>
+    <string name="label_wifi_blacklist">Blacklisted Wi‑Fi</string>
+    <string name="label_wifi_other">Non-blacklisted Wi‑Fi</string>
+    <string name="label_no_network">No network / unvalidated network</string>
+    <string name="action_enable_proxy">Enable proxy</string>
+    <string name="action_disable_proxy">Disable proxy</string>
+    <string name="label_require_validated">Apply Wi‑Fi / cellular rules only on VALIDATED networks</string>
+    <string name="label_blacklist">Blacklisted SSIDs (one per line, comma / semicolon also supported)</string>
+    <string name="hint_blacklist">HomeWiFi
+OfficeWiFi</string>
+    <string name="label_debounce">Debounce milliseconds</string>
+    <string name="label_boot_delay">Boot delay before policy starts (milliseconds)</string>
+
+    <string name="button_save">Save</string>
+    <string name="button_restore_defaults">Restore defaults</string>
+    <string name="button_manual_start">Manual Start</string>
+    <string name="button_manual_stop">Manual Stop</string>
+
+    <string name="section_logs">Logs</string>
+    <string name="logs_empty">No logs yet</string>
+    <string name="prompt_check_su">Please check whether Root / SU access has been granted.</string>
+    <string name="prompt_check_lsposed">Please check whether the LSPosed module is enabled and scoped only to System Framework (android).</string>
+    <string name="developer_signature">Developer: https://github.com/hyyz17200</string>
+</resources>

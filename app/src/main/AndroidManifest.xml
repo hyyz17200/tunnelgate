@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <queries>
+        <package android:name="com.v2raytun.android" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@android:drawable/sym_def_app_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TunnelGate">
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+
+        <meta-data
+            android:name="xposeddescription"
+            android:value="@string/xposed_desc" />
+
+        <meta-data
+            android:name="xposedminversion"
+            android:value="93" />
+
+        <meta-data
+            android:name="xposedsharedprefs"
+            android:value="true" />
+
+        <meta-data
+            android:name="xposedscope"
+            android:value="android" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".ControlReceiver"
+            android:exported="true" />
+
+        <receiver
+            android:name=".AppEventReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.github.hyyz17200.tunnelgate.ACTION_HOOK_STATUS" />
+                <action android:name="io.github.hyyz17200.tunnelgate.ACTION_LOG_EVENT" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
